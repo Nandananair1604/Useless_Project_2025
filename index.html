@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChronoClown™ – Time Travel</title>
+  <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+
+  <!-- Main Menu -->
+  <div id="mainUI" class="screen">
+    <h1 class="logo">ChronoClown<sup>™</sup></h1>
+    <p class="tagline">Teleport through time to complete dumb missions</p>
+
+    <div class="controls">
+      <label for="eraDropdown">Choose Era:</label>
+      <select id="eraDropdown">
+        <option value="">-- Select an era --</option>
+        <option value="Caveman Times">Caveman Times</option>
+        <option value="Ancient Egypt">Ancient Egypt</option>
+        <option value="Modern era">Modern era</option>
+        <option value="4200 AD">4200 AD</option>
+        <option value="Medieval Times">Medieval Times</option>
+      </select>
+      <button id="teleportBtn">🚀 Teleport</button>
+    </div>
+
+    <h3 class="log-title">🧾 Travel Log</h3>
+    <ul id="travelLogList"></ul>
+  </div>
+
+  <!-- Era Scene -->
+  <div id="eraScene" class="screen">
+    <video 
+      id="bgVideo" 
+      class="fullscreen-video"
+      muted 
+      playsinline 
+      preload="auto">
+    </video>
+
+    <div id="overlay" class="overlay">
+      <div id="taskBox" class="task-box">
+        <p id="taskText"></p>
+      </div>
+      <button id="backBtn" class="back-btn">🔙 Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
